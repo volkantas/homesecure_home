@@ -1,0 +1,29 @@
+{
+  "name": "home-secure-home-pack",
+  "version": "1.0.0",
+  "description": "Home secure system home part",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volkantas/homesecure_home.git"
+  },
+  "author": "Volkan Taş",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/volkantas/homesecure_home/issues"
+  },
+  "homepage": "https://github.com/volkantas/homesecure_home#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "im-decode": "~0.1.0",
+    "ttq": "~0.1.1"
+  },
+  "devDependencies": {
+    "request": "~2.30.0",
+    "mjpeg-consumer": "~1.0.5",
+    "file-on-write": "~0.2.0"
+  }
+}
