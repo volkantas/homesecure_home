@@ -1,11 +1,11 @@
 var config = {
   serverPort: 3000,
-  homeServerIP: "http://46.101.125.172", //Socket
+  homeServerIP: "http://46.101.125.172", //Socket server IP
   homeServerPort: 3000,
-  ipCamIP: "http://78.182.91.216",
+  ipCamIP: "", //Local IP for camera
   ipCamPort: 8090,
-  ipCamUsername: "user",
-  ipCamPassword: "volkamin"
+  ipCamUsername: "",
+  ipCamPassword: ""
 }
 var express = require('express');
 var app = express();
@@ -19,7 +19,7 @@ var Sound = require('./lib/sound.js');
 
 snd = new Sound({
   socket:socket,
-  path: "Saw_The_Theme.mp3"
+  path: "Warning-alarm-sound-effect.mp3"
 });
 
 //snd.play();
