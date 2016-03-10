@@ -3,3 +3,7 @@ On Debian/Ubuntu, the ALSA backend is selected by default, so be sure to have th
 <code> $ sudo apt-get install libasound2-dev </code>
 
 After then reopen terminal
+
+-----------
+
+ ImageMagick program must be installed for motion package
