@@ -25,8 +25,8 @@
     "ttq": "~0.1.1"
   },
   "devDependencies": {
-    "request": "~2.30.0",
-    "mjpeg-consumer": "~1.0.5",
-    "file-on-write": "~0.2.0"
+    "request": "~2.69.0",
+    "mjpeg-consumer": "~1.1.0",
+    "file-on-write": "~1.1.1"
   }
 }
