@@ -10,7 +10,8 @@ var Sound = require('./lib/sound.js');
 
 //SOCKET INIT
 new SocketIO({
-  socket: socket
+  socket: socket,
+  userKey: Config.userKey
 });
 
 //SOUND INIT
@@ -19,12 +20,13 @@ socket.on('sound', function(data){
   var snd = new Sound({
     socket: socket,
     path: data.message.path, //"Warning-alarm-sound-effect.mp3"
-    id: data.message.id
+    id: data.message.id,
+    userKey: Config.userKey
   });
   sounds.push({id: data.message.id, sound: snd});
 });
 
-socket.on('soundStop', function(data){
+socket.on('soundStop_'+Config.userKey, function(data){
   for(var i=0; i<=sounds.length-1; i++){
     if(sounds[i].id == data.message.id){
       sounds[i].sound.stop();
@@ -39,7 +41,8 @@ function initCams(){
   Config.cameras.forEach(function(camera) {
     var ipcam = new IpCam({
       socket: socket,
-      camera: camera
+      camera: camera,
+      userKey: Config.userKey
     });
     ipcams.push(ipcam);
   })
